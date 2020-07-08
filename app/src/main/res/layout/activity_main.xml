@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- 開頭圖檔 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="19"
+        android:src="@drawable/title_bg" />
+
+    <!-- 整個大版面 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="84"
+        android:orientation="vertical">
+
+        <!-- 4個水平的猜數字格子 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="15"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/main_input4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginHorizontal="6dp"
+                android:background="@drawable/input_bg"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/main_input3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_toLeftOf="@+id/main_input4"
+                android:background="@drawable/input_bg"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/main_input2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_toLeftOf="@+id/main_input3"
+                android:background="@drawable/input_bg"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/main_input1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_toLeftOf="@+id/main_input2"
+                android:background="@drawable/input_bg"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- 一個顯示幾A幾B的格子 -->
+        <ListView
+            android:id="@+id/main_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="2dp"
+            android:layout_weight="42"
+            android:background="@drawable/board_bg" />
+
+        <!-- 四排按鈕的版面 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="43"
+            android:orientation="vertical"
+            android:paddingHorizontal="6dp">
+            <!-- 第一排Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/main_btn_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_1"
+                    android:onClick="inputNumber" />
+
+                <Button
+                    android:id="@+id/main_btn_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_2"
+                    android:onClick="inputNumber" />
+
+                <Button
+                    android:id="@+id/main_btn_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_3"
+                    android:onClick="inputNumber" />
+
+                <Button
+                    android:id="@+id/main_btn_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_4"
+                    android:onClick="inputNumber" />
+            </LinearLayout>
+            <!-- 第二排Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/main_btn_5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_5"
+                    android:onClick="inputNumber" />
+
+                <Button
+                    android:id="@+id/main_btn_6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_6"
+                    android:onClick="inputNumber" />
+
+                <Button
+                    android:id="@+id/main_btn_7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_7"
+                    android:onClick="inputNumber" />
+
+                <Button
+                    android:id="@+id/main_btn_8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_8"
+                    android:onClick="inputNumber" />
+            </LinearLayout>
+            <!-- 第三排Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginVertical="2dp"
+                >
+                <Button
+                    android:id="@+id/main_btn_9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_9"
+                    android:onClick="inputNumber"
+                    android:layout_margin="2dp"
+                    />
+                <Button
+                    android:id="@+id/main_btn_0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_0"
+                    android:onClick="inputNumber"
+                    android:layout_margin="2dp"
+                    />
+                <Button
+                    android:id="@+id/main_btn_back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_back"
+                    android:onClick="back"
+                    android:layout_margin="2dp"
+                    />
+                <Button
+                    android:id="@+id/main_btn_clear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_clear"
+                    android:onClick="clear"
+                    android:layout_margin="2dp"
+                    />
+            </LinearLayout>
+            <!-- 第四排Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginVertical="2dp"
+                >
+                <Button
+                    android:id="@+id/main_btn_send"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/btn_send"
+                    android:paddingHorizontal="8dp"
+                    android:layout_margin="2dp"
+                    android:onClick="send"
+                    />
+                <Button
+                    android:id="@+id/main_btn_replay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_replay"
+                    android:layout_margin="2dp"
+                    android:onClick="replay"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
