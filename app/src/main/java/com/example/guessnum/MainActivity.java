@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     // 初始化一局遊戲
     private void initGame() {
         answer = createAnswer();
+        Log.d("test", "Answer:" + answer);
         clear(null);
     }
 
